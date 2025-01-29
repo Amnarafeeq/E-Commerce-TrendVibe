@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import {ClerkProvider} from "@clerk/nextjs"
 import {Toaster} from "react-hot-toast"
 import ChatIcon from "@/components/ChatIcon";
-import { Suspense } from "react";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 const geistSans = Geist({
@@ -31,7 +30,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Suspense>
     <ClerkProvider>
       <html lang="en">
       <body
@@ -50,6 +48,5 @@ export default function RootLayout({
       </body>
     </html>
     </ClerkProvider>
-    </Suspense>
   );
 }
