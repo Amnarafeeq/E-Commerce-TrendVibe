@@ -40,7 +40,7 @@ const ChatIcon = () => {
         }
     },[])
   return (
-    <div>ChatIcon</div>
+    <div></div>
   )
 }
 
