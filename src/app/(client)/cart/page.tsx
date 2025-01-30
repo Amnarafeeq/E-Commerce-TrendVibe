@@ -172,7 +172,7 @@ const CartPage = () => {
                             <span>Total</span>
                             <PriceFormatter amount={getTotalPrice()} className='text-lg font-bold' />
                         </div>
-                        <Button className='w-full rounded-full font-semibold tracking-wide bg-darkBackground/90 hover:bg-darkBackground text-textColor2' size="lg">Proceed to Checkout</Button>
+                        <Button disabled={loading} onClick={handleCheckout} className='w-full rounded-full font-semibold tracking-wide bg-darkBackground/90 hover:bg-darkBackground text-textColor2' size="lg">Proceed to Checkout</Button>
                         <Link href="" className='flex items-center justify-center py-2 border border-darkBackground/50 rounded-full border-textColor2  hover:bg-darkBackground hoverEffect'>
                            <Image src="/Images/paymentlogo.png" alt='' width={100} height={100} />
                         </Link>
