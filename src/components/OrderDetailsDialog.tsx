@@ -16,7 +16,6 @@ interface Props {
 }
 
 const OrderDetailsDialog:FC<Props> = ({order,isOpen,onClose}) => {
-    // console.log("Order data received:", order);
     if(!order) return order;
   return <Dialog open={isOpen} onOpenChange={onClose} >
            <DialogContent className="max-w-4xl max-h-[90vh] bg-white overflow-y-scroll">
