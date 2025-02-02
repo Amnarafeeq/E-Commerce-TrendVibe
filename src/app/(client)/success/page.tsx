@@ -3,7 +3,7 @@
 import { useRouter, useSearchParams } from "next/navigation"
 import useCartStore from "../../../../store"
 import { motion } from "motion/react"
-import { Check, Home, Package, ShoppingBag } from "lucide-react"
+import { Check, Home, Package, ShoppingBag, Truck } from "lucide-react"
 import Link from "next/link"
 import { useEffect } from "react"
 
@@ -39,7 +39,7 @@ const SuccessPage = () => {
                     <li>Track your order status anytime</li>
                 </ul>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
                 <Link href={"/"} className="flex items-center justify-center px-4 py-3 font-semibold bg-darkBackground/90 text-textColor2 rounded-lg hover:bg-darkBackground transition-all duration-300 shadow-md ">
                 <Home className="w-5 h-5 mr-2"/>Home
                 </Link>
@@ -48,6 +48,9 @@ const SuccessPage = () => {
                 </Link>
                 <Link href={"/"}  className="flex items-center justify-center px-4 py-3 font-semibold bg-darkBackground/90 text-textColor2 rounded-lg hover:bg-darkBackground transition-all duration-300 shadow-md ">
                 <ShoppingBag  className="w-5 h-5 mr-2"/>Shop
+                </Link>
+                <Link href={"/tracking-order"}  className=" flex items-center text-sm justify-center px-1 py-3 font-semibold border border-darkBackground/90 text-darkBackground rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-md  ">
+                <Truck  className="w-5 h-5 mr-2"/>Track Order
                 </Link>
             </div>
         </motion.div>

@@ -78,19 +78,19 @@ const CartPage = () => {
             </div>
            <div className='grid lg:grid-cols-3 md:gap-8'>
              {/* products */}
-             <div className='lg:col-span-2 rounded-lg'>
-                <div className='border bg-white rounded-md'>
+             <div className='lg:col-span-2   rounded-lg'>
+                <div className='border rounded-md'>
                     {cartProducts.map(({product})=>{
                         const itemCount = getItemCount(product._id)
                        return(
-                        <div key={product._id} className='border p-2.5 last:border-b-0 flex items-center justify-center'>
-                            <div className='flex flex-1 items-center gap-2 h-36 md:h-44'>
+                        <div key={product._id} className='border p-2.5  last:border-b-0 flex items-center justify-center'>
+                            <div className='flex flex-col sm:flex-row flex-1  items-center gap-2 sm:h-36 md:h-44 '>
                                 {product.images && (
                                 <Link href={`/product/${product.slug?.current}`} className='border p-0.5 md:p-1 mr-2 rounded-md overflow-hidden group '>
                                     <Image src={urlFor(product.images[0]).url()} width={500} height={500} alt='' className='w-32 md:w-40 h-32 md:h-40 object-cover group-hover:scale-105 overflow-hidden hoverEffect'/>
                                 </Link>
                                 )}
-                                <div className='h-full flex flex-1 items-start flex-col justify-between py-1'>
+                                <div className='h-full flex  flex-1 items-start flex-col justify-between max-sm:justify-center max-sm:items-center max-sm:text-center py-1'>
                                     <div className='py-1.5'>
                                         <h3 className='font-semibold'>{product.name}</h3>
                                         <p className='text-sm text-textColor1'>{product.intro}</p>
@@ -118,7 +118,7 @@ const CartPage = () => {
                                         </TooltipProvider>
                                     </div>
                                 </div>
-                                <div className='flex flex-col items-start justify-between h-36 md:h-44 p-0.5 md:p-1'>
+                                <div className='flex max-sm:gap-10 sm:flex-col items-start justify-between sm:h-36 md:h-44 p-0.5 md:p-1'>
                                     <PriceFormatter amount={(product.price as number)* itemCount } className='font-bold text-lg' />
                                     <QuantityButtons product={product}/>
                                 </div>
