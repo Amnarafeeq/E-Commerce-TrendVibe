@@ -22,7 +22,10 @@ const FeaturedPosts = () => {
 
       <div className="w-full h-auto  lg:h-[606px]  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-4 rounded-[5px] px-2 mt-5">
         {featuredPosts.map((post) => (
-          <div key={post.id} className="w-full hover:scale-95 transition duration-300 hover:cursor-pointer lg:w-[328px] h-full  shadow-lg ">
+          <div
+            key={post.id}
+            className="w-full hover:scale-95 transition duration-300 hover:cursor-pointer lg:w-[328px] h-full  shadow-lg "
+          >
             <FeaturedPostsProp img={post.img} />
           </div>
         ))}

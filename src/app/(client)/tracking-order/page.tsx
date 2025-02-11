@@ -40,10 +40,12 @@ const ShippingRatesPage = () => {
       const response = await axios.post("/api/shipengine/get-rates", {
         shipeToAddress,
         // map the cart products which can be shipped and use only weight and dimensions
-        packages: cartProductsWhichCanBeShipped.map((product: { weight: any; dimensions: any; }) => ({
-          weight: product.weight,
-          dimensions: product.dimensions,
-        })),
+        packages: cartProductsWhichCanBeShipped.map(
+          (product: { weight: any; dimensions: any }) => ({
+            weight: product.weight,
+            dimensions: product.dimensions,
+          })
+        ),
       });
       // see the response in browser
       console.log(response.data);
@@ -275,18 +277,26 @@ const ShippingRatesPage = () => {
           </div>
         )}
         {labelPdf && (
-         <Link target="_blank" href={labelPdf}> <button className="px-4 py-2  bg-greenBackground text-white rounded-md hover:bg-green-900">Download Label</button></Link>
+          <Link target="_blank" href={labelPdf}>
+            {" "}
+            <button className="px-4 py-2  bg-greenBackground text-white rounded-md hover:bg-green-900">
+              Download Label
+            </button>
+          </Link>
         )}
         {trackingObj && (
           <div className="mt-8 space-y-2">
             <h2 className="text-xl font-semibold text-gray-800 mb-4">
-              Tracking thinks (We are using ShipEngine test api key so order will not trace)
+              Tracking thinks (We are using ShipEngine test api key so order
+              will not trace)
             </h2>
             <p>Tracking Number: {trackingObj.trackingNumber}</p>
             <p> LabelId: {trackingObj.labelId}</p>
             <p> CarrierCode: {trackingObj.carrierCode}</p>
             <Link href={`/tracking/?labelId=${trackingObj.labelId}`}>
-              <button className="px-4 py-2 my-2 bg-textColor2/90 text-white font-bold rounded-md hover:bg-textColor2">Track Order</button>
+              <button className="px-4 py-2 my-2 bg-textColor2/90 text-white font-bold rounded-md hover:bg-textColor2">
+                Track Order
+              </button>
             </Link>
           </div>
         )}

@@ -1,4 +1,3 @@
-
 import Container from "@/components/Container";
 import FeaturedPosts from "@/components/FeatuedPost";
 import Fluid from "@/components/Fluid";
@@ -10,21 +9,19 @@ import Summer from "@/components/Summer";
 
 export default function Home() {
   return (
-   <div>
-    <HeroSection/>
+    <div>
+      <HeroSection />
 
-   <Container className="py-10" >
-    <ShopCards/>
-    <HomeBanner/>
-    <ProductGrid/>
-   </Container>
-   <Summer/>
-   <Container className="">
-          <Fluid/>
-          <FeaturedPosts/>
-   </Container>
-
-
-   </div>
+      <Container className="py-10">
+        <ShopCards />
+        <HomeBanner />
+        <ProductGrid />
+      </Container>
+      <Summer />
+      <Container className="">
+        <Fluid />
+        <FeaturedPosts />
+      </Container>
+    </div>
   );
 }

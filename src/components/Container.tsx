@@ -1,8 +1,8 @@
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
-interface Props{
-    children:React.ReactNode
-    className:string
+interface Props {
+  children: React.ReactNode;
+  className: string;
 }
 
 const Container = ({ children, className }: Props) => {
@@ -12,4 +12,4 @@ const Container = ({ children, className }: Props) => {
     </div>
   );
 };
-export default Container
+export default Container;

@@ -1,9 +1,7 @@
 import { AlarmClock, ChevronRight, ImageIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-// import { IoMdImage } from "react-icons/io";
-// import { LuAlarmClock } from "react-icons/lu";
-// import { MdArrowForwardIos } from "react-icons/md";
+
 interface IFImage {
   img: string;
 }

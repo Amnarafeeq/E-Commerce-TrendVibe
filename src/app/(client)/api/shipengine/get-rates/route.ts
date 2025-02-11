@@ -1,5 +1,5 @@
-import { shipengine } from "../../../../(client)/lib/helper/shipEngine"; // Import ShipEngine client
-import { Address, Package } from "../../../../../../type"; // Import custom types
+import { shipengine } from "../../../../(client)/lib/helper/shipEngine";
+import { Address, Package } from "../../../../../../type";
 import { NextRequest } from "next/server";
 
 export async function POST(req: NextRequest) {
@@ -9,7 +9,6 @@ export async function POST(req: NextRequest) {
       packages,
     }: { shipeToAddress: Address; packages: Package[] } = await req.json();
 
-    // Validate required fields
     if (!shipeToAddress || !packages) {
       return new Response(
         JSON.stringify({
@@ -18,8 +17,6 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
-// in testing api you can use your  address which you have selected in create account
-// Define the "ship from" address (e.g., your warehouse or business address)
     const shipFromAddress: Address = {
       name: "Michael Smith",
       phone: "+1 555 987 6543",
@@ -29,10 +26,9 @@ export async function POST(req: NextRequest) {
       stateProvince: "CA",
       postalCode: "90001",
       countryCode: "US",
-      addressResidentialIndicator: "no", // Indicates a commercial address
+      addressResidentialIndicator: "no",
     };
 
-    // Fetch shipping rates from ShipEngine
     const shipmentDetails = await shipengine.getRatesWithShipmentDetails({
       shipment: {
         shipTo: shipeToAddress,
@@ -45,22 +41,20 @@ export async function POST(req: NextRequest) {
           process.env.SHIPENGINE_SECOND_COURIER || "",
           process.env.SHIPENGINE_THIRD_COURIER || "",
           process.env.SHIPENGINE_FOURTH_COURIER || "",
-        ].filter(Boolean), // Remove empty strings
+        ].filter(Boolean),
       },
     });
 
-    // Log details for debugging
     console.log("Ship To Address:", shipeToAddress);
     console.log("Packages:", packages);
     console.log("Shipment Details:", shipmentDetails);
 
-    // Return the response with shipment details
     return new Response(
       JSON.stringify({ shipeToAddress, packages, shipmentDetails }),
       { status: 200 }
     );
   } catch (error) {
-    console.log("Error fetching shipping rates:", error)
+    console.log("Error fetching shipping rates:", error);
     return new Response(JSON.stringify({ error: error }), {
       status: 500,
     });
