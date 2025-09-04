@@ -11,12 +11,12 @@
   const Summer = () => {
     return (
         <div className="w-full  md:h-[100vh] bg-greenBackground flex justify-between items-end ">
-            <div className="w-full bg-yelow-600 h-auto  mx-auto lg:w-[1049px]  md:h-[600px] flex flex-col md:flex-row items-center justify-between pt-6 sm:gap-y-20  text-white">
-              <div className=" h-auto bg--200 lg:w-[509px]  md:pl-7 md:h-[400px] flex  flex-col md:justify-between gap-y-3 sm:gap-y-5 mb-4  max-sm:text-center ">
+            <div className="w-full h-auto  mx-auto lg:w-[1049px]  md:h-[600px] flex flex-col md:flex-row items-center justify-between pt-6 sm:gap-y-20  text-white">
+              <div className=" h-auto bg--200 lg:w-[509px]  md:pl-7 md:h-[350px] flex  flex-col md:justify-between gap-y-3 sm:gap-y-5 mb-4  max-sm:text-center ">
                 <h4 className="text-sm max-sm:text-center md:text-[20px]">
                   SUMMER 2020
                 </h4>
-                <h1 className="font-bold max-sm:text-center text-[34px] md:text-[56px]">
+                <h1 className="font-bold max-sm:text-center text-[32px] md:text-[54px]">
                   Vita Classic Product
                 </h1>
                 <p className="text-sm w-[250px] max-sm:text-center max-sm:mx-auto md:w-[341px]">
