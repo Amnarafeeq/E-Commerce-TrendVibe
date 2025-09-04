@@ -11,8 +11,8 @@ import { Button } from "./ui/button";
 
 const NotAccessToCart = () => {
   return (
-    <div className="flex items-center justify-center py-12 md:py-32 bg-gray-100 p-4">
-      <Card className="w-full max-w-md">
+    <div className="flex items-center justify-center  py-12 md:py-32 bg-gray-100 p-4">
+      <Card className="w-full max-w-md shadow-2xl border-2 border-textColor1">
         <CardHeader className="space-y-4">
           <h2 className="text-3xl text-textColor2 font-bold text-center">
             TrendVibe
@@ -21,7 +21,7 @@ const NotAccessToCart = () => {
             Welcome Back!
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-7">
+        <CardContent className="space-y-8">
           <p className="text-center text-sm text-gray-500">
             Log in to view your cart items and checkout. Don’t miss out on your
             favorite products!
@@ -36,7 +36,7 @@ const NotAccessToCart = () => {
             </Button>
           </SignInButton>
         </CardContent>
-        <CardFooter className="flex flex-col space-y-2">
+        <CardFooter className="flex flex-col space-y-2 md:space-y-5">
           <div>Don’t have an Account?</div>
           <SignUpButton mode="modal">
             <Button
@@ -50,6 +50,7 @@ const NotAccessToCart = () => {
         </CardFooter>
       </Card>
     </div>
+    
   );
 };
 

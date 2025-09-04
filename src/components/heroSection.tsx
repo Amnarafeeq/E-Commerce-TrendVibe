@@ -12,10 +12,10 @@ const HeroSection = () => {
         className=" w-full h-full max-sm:h-[100vh] object-cover"
       />
 
-      <div className="w-auto  max-sm:text-center absolute ml-4 md:ml-20 h-auto bg--600 md:w-[599px] md:h-[331px] bg-cyan- text-white font-bold flex flex-col justify-between max-sm:space-y-5">
+      <div className="w-auto  max-sm:text-center absolute ml-4 md:ml-20 h-auto bg--600 md:w-[599px] md:h-[315px] bg-cyan- text-white font-bold flex flex-col justify-between max-sm:space-y-5">
         <h5>SUMMER 2020</h5>
         <h1 className="md:text-[58px]">NEW COLLECTION</h1>
-        <p className="bg--200 md:text-[20px] w-[376px] font-medium max-sm:w-[200px]">
+        <p className=" md:text-[20px] w-[376px] font-medium max-sm:w-[200px]">
           We know how large objects will act, but things on a small scale.
         </p>
         <div>

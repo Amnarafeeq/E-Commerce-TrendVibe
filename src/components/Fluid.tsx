@@ -15,7 +15,7 @@ const Fluid = () => {
           />
         </div>
       </div>
-      <div className="w-auto mx-auto md:w-[573px] h-auto md:h-[326px] flex flex-col md:justify-between text-center justify- gap-y-4 sm:gap-y-7 ">
+      <div className="w-auto mx-auto md:w-[573px] h-auto md:h-[326px] flex flex-col md:justify-between items-center text-center  gap-y-4 sm:gap-y-7 ">
         <h4 className="text-[#BDBDBD] font-bold">SUMMER 2022</h4>
         <h1 className="text-[30px] md:text-[40px] font-bold   md:w-[387px] text-darkBackground">
           Part of the Neural Universe

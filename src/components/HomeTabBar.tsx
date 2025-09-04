@@ -20,7 +20,7 @@ const HomeTabBar = ({ selectedTab, onTabSelect }: Props) => {
           </button>
         ))}
       </div>
-      <button className="hidden sm:block">
+      <button className="hidden sm:block ml-4">
         <Repeat />
       </button>
     </div>

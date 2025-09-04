@@ -11,12 +11,12 @@
   const Summer = () => {
     return (
         <div className="w-full  md:h-[100vh] bg-greenBackground flex justify-between items-end ">
-            <div className="w-full h-auto  mx-auto lg:w-[1049px]  md:h-[600px] flex flex-col md:flex-row items-center justify-between pt-6 sm:gap-y-20  text-white">
-              <div className=" h-auto lg:w-[509px]  md:pl-7 md:h-[432px] flex  flex-col md:justify-between gap-y-3 sm:gap-y-5 mb-4  max-sm:text-center ">
+            <div className="w-full bg-yelow-600 h-auto  mx-auto lg:w-[1049px]  md:h-[600px] flex flex-col md:flex-row items-center justify-between pt-6 sm:gap-y-20  text-white">
+              <div className=" h-auto bg--200 lg:w-[509px]  md:pl-7 md:h-[400px] flex  flex-col md:justify-between gap-y-3 sm:gap-y-5 mb-4  max-sm:text-center ">
                 <h4 className="text-sm max-sm:text-center md:text-[20px]">
                   SUMMER 2020
                 </h4>
-                <h1 className="font-bold max-sm:text-center text-[34px] md:text-[58px]">
+                <h1 className="font-bold max-sm:text-center text-[34px] md:text-[56px]">
                   Vita Classic Product
                 </h1>
                 <p className="text-sm w-[250px] max-sm:text-center max-sm:mx-auto md:w-[341px]">
@@ -34,7 +34,7 @@
                 <Image
                   width={100}
                   height={100}
-                  src="/Images/summer1.png"
+                  src="/Images/summer2.png"
                   alt=""
                   className="w-auto h-[300px] md:w-full md:h-full  overflow-hidden "
                 />
